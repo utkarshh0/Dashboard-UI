@@ -18,7 +18,7 @@ export default function Menu() {
         <div className="w-full h-full flex flex-col justify-start items-start space-y-4 p-2">
             <div className='w-full flex justify-center items-center space-x-2 p-2'>
                 <img src={logo} width="30" alt="" />
-                <p className='font-bold lg:text-md hidden md:block'>UI Dashboard</p>
+                <p className='font-bold lg:text-md'>UI Dashboard</p>
             </div>
             <hr />
             <div className='w-full flex flex-col space-y-4'>

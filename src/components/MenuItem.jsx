@@ -19,7 +19,7 @@ export default function MenuItem({Icon, label, onClick}){
           >
           <Icon />
         </span>
-        <p className='text-sm font-medium hidden md:block'>{label}</p>
+        <p className='text-sm font-medium'>{label}</p>
     </button>
   )
 }

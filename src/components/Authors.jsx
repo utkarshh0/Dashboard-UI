@@ -35,56 +35,58 @@ export default function Authors() {
   return (
     <div className="w-full h-full bg-white my-4 p-4 rounded-lg shadow-xl">
       <p className="font-bold opacity-90">Authors Table</p>
-      <table className="my-4 w-full table-auto">
-        <thead>
-          <tr className="border-b-2 text-xs opacity-50 text-left">
-            <th className="px-8">AUTHORS</th>
-            <th className="p-4">FUNCTION</th>
-            <th className="p-4">STATUS</th>
-            <th className="p-4">EMPLOYED</th>
-          </tr>
-        </thead>
-        <tbody>
-          {authors.authors.map((author, index) => (
-            <tr className="text-md border-b-2 font-medium" key={index}>
-              <td className="px-8">
-                <div className="flex space-x-4 items-center">
-                  <Avatar name={author.name} size="30" className="rounded-lg" alt="" />
-                  <div className="flex flex-col">
-                    <p className="font-bold text-sm">{author.name}</p>
-                    <p className="text-xs opacity-70">{author.email}</p>
-                  </div>
-                </div>
-              </td>
-              <td className="p-4 text-xs font-bold opacity-70 text-gray-700">
-                {author.function}
-              </td>
-              <td className="p-4 text-xs font-bold">
-                <button
-                  className={`px-2 py-1 bg-gradient-to-br ${
-                    author.status === "ONLINE" ? `from-[#81E537]` : `from-white`
-                  } from-1% ${
-                    author.status === "ONLINE" ? `to-[#3ACD55]` : `to-gray-600`
-                  } to-99% text-white rounded-lg`}
-                >
-                  {author.status}
-                </button>
-              </td>
-              <td className="p-4 text-xs font-bold opacity-70 text-gray-700">
-                {author.employed}
-              </td>
-              <td className="p-4 text-sm font-bold opacity-70 text-gray-700">
-                <button
-                  onClick={() => handleEditClick(author)}
-                  className="text-blue-500 underline"
-                >
-                  Edit
-                </button>
-              </td>
+      <div className="overflow-x-auto">
+        <table className="my-4 w-full table-auto">
+          <thead>
+            <tr className="border-b-2 text-xs opacity-50 text-left">
+              <th className="px-8">AUTHORS</th>
+              <th className="p-4">FUNCTION</th>
+              <th className="p-4">STATUS</th>
+              <th className="p-4">EMPLOYED</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {authors.authors.map((author, index) => (
+              <tr className="text-md border-b-2 font-medium" key={index}>
+                <td className="px-8">
+                  <div className="flex space-x-4 items-center">
+                    <Avatar name={author.name} size="30" className="rounded-lg" alt="" />
+                    <div className="flex flex-col">
+                      <p className="font-bold text-sm">{author.name}</p>
+                      <p className="text-xs opacity-70">{author.email}</p>
+                    </div>
+                  </div>
+                </td>
+                <td className="p-4 text-xs font-bold opacity-70 text-gray-700">
+                  {author.function}
+                </td>
+                <td className="p-4 text-xs font-bold">
+                  <button
+                    className={`px-2 py-1 bg-gradient-to-br ${
+                      author.status === "ONLINE" ? `from-[#81E537]` : `from-white`
+                    } from-1% ${
+                      author.status === "ONLINE" ? `to-[#3ACD55]` : `to-gray-600`
+                    } to-99% text-white rounded-lg`}
+                  >
+                    {author.status}
+                  </button>
+                </td>
+                <td className="p-4 text-xs font-bold opacity-70 text-gray-700">
+                  {author.employed}
+                </td>
+                <td className="p-4 text-sm font-bold opacity-70 text-gray-700">
+                  <button
+                    onClick={() => handleEditClick(author)}
+                    className="text-blue-500 underline"
+                  >
+                    Edit
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
 
       {/* Dialog */}
       <dialog ref={dialogRef} className="rounded-lg p-6 w-1/3 shadow-xl bg-white">

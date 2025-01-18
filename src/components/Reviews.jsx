@@ -38,13 +38,13 @@ export default function Reviews() {
           </div>
           ))}
           <div className="w-full flex">
-            <div className="w-2/4 p-4 text-sm">
+            <div className="w-4/5 md:w-3/5 p-4 text-sm">
               <p className="opacity-70">
                 More than <b>1,500,000</b> developers used Creative Tim&apos;s products and over <b>700,000</b> projects were created.
               </p>
             </div>
-            <div className="w-2/4 flex justify-end items-center">
-              <button className="px-4 py-3 bg-zinc-800 text-white text-sm font-medium rounded-lg">View all reviews</button>
+            <div className="w-1/5 md:w-2/5 flex justify-end items-end md:items-center">
+              <button className="px-2 md:px-4 py-2 md:py-3 whitespace-nowrap bg-zinc-800 text-white text-sm font-medium rounded-lg">View all reviews</button>
             </div>
           </div>
       </div>  

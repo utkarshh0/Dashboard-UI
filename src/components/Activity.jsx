@@ -39,7 +39,7 @@ export default function Activity() {
   ]
   
   return (
-    <div className="w-full h-full grid grid-cols-2 grid-rows-2 gap-5 px-1">
+    <div className="w-full h-full grid grid-cols-1 sm:grid-cols-2 grid-rows-1 sm:grid-rows-2 gap-5 px-1">
         {activites.map((activity, index) => <ActivityCard key={index} Icon={activity.Icon} data={activity.data}/>)}
     </div>
   )
